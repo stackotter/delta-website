@@ -1,4 +1,5 @@
 <script>
+  import PrimaryButton from "$lib/PrimaryButton.svelte";
   import Nav from "../lib/Nav.svelte";
 </script>
 
@@ -7,9 +8,9 @@
 <div id="landing-page">
   <div id="lead">
     <h1 id="heading">A next generation Minecraft client</h1>
-    <div id="subtitle">Completely <span id="emphasis">open source</span>, written in Swift, and <span id="emphasis">optimised</span> for macOS.</div>
+    <div id="subtitle">Completely <span class="emphasis">open source</span>, written in Swift, and <span class="emphasis">optimised</span> for macOS.</div>
     <span id="buttons">
-      <a href="/download" id="primary-button">Download</a>
+      <PrimaryButton href="/downloads">Download</PrimaryButton>
       <a href="https://github.com/stackotter/delta-client" id="github-button" class="icon-button"><img src="github.png" alt="GitHub logo"></a>
       <a href="https://discord.gg/xZPyDbmR6k" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo"></a>
     </span>
@@ -72,6 +73,10 @@
     bottom: 0;
   }
 
+  #lead, #lead-screenshot {
+    margin-top: -4rem;
+  }
+
   #lead {
     width: 23vw;
     margin-left: 2vw;
@@ -92,11 +97,6 @@
 
   #subtitle {
     margin-bottom: 1.5rem;
-  }
-
-  #emphasis {
-    font-style: italic;
-    font-weight: bolder;
   }
 
   #buttons {
@@ -129,20 +129,5 @@
     height: 2.5rem;
     width: 2.5rem;
     margin-left: 1rem;
-  }
-
-  #primary-button {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    border: none;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 550;
-    color: white;
-    background: #8900FF;
-    border-radius: 1.25rem;
-    padding: 0 2.5rem;
-    height: 2.5rem;
   }
 </style>

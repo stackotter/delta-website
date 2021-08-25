@@ -1,12 +1,12 @@
 <div id="nav">
   <span id="nav-left">
-    <img id="logo" src="favicon.png" alt="Delta Client logo">
-    <a href="/">Delta Client</a>
+    <a href="/"><img id="logo" src="favicon.png" alt="Delta Client logo"></a>
+    <a class="link" href="/">Delta Client</a>
   </span>
   <span id="nav-right">
-    <a href="/download">Download</a>
-    <a href="/plugins">Plugins</a>
-    <a href="/docs">Docs</a>
+    <a class="link" href="/downloads">Downloads</a>
+    <a class="link" href="/plugins">Plugins</a>
+    <a class="link" href="/docs">Docs</a>
   </span>
 </div>
 
@@ -39,7 +39,7 @@
     margin-right: 1.5rem;
   }
 
-  #nav a {
+  .link{
     text-decoration: none;
     color: black;
     padding: 0 1rem;
