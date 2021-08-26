@@ -1,6 +1,6 @@
 <script>
-  import PrimaryButton from "../lib/PrimaryButton.svelte"
-  import SecondaryButton from "../lib/SecondaryButton.svelte"
+  import PrimaryButton from "./PrimaryButton.svelte"
+  import SecondaryButton from "./SecondaryButton.svelte"
 
   export let isPrimary = false;
   export let downloadURL;

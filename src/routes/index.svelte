@@ -1,9 +1,11 @@
 <script>
   import PrimaryButton from "$lib/PrimaryButton.svelte";
-  import Nav from "../lib/Nav.svelte";
+  import SvelteSeo from 'svelte-seo';
 </script>
 
-<Nav/>
+<SvelteSeo
+  title="Delta Client"
+  description="A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS."/>
 
 <div id="landing-page">
   <div id="lead">

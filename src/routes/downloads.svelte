@@ -1,9 +1,11 @@
 <script>
-  import Page from "../lib/Page.svelte"
+  import Page from "$lib/page.svelte";
   import DownloadEntry from "$lib/DownloadEntry.svelte"
 </script>
 
-<Page>
+<Page
+  title="Downloads"
+  description="Delta Client is still deep in development so snapshot builds are in no short supply. Head over to the releases page on the Delta Client GitHub for more details on each release.">
   <h1>Downloads</h1>
   <p>Delta Client is still deep in development so snapshot builds are in no short supply. Head over to the <a href="https://github.com/stackotter/delta-client/releases">releases</a> page on the Delta Client GitHub for more details on each release.</p>
 
