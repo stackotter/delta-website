@@ -1,4 +1,5 @@
-- [ ] Add page titles
+- [x] Add page titles
+- [ ] Favicon
 - [ ] Look into the weird border carry over bug
 - [ ] Supply different resolutions of images to improve first load
 - [ ] Round corners of favicon

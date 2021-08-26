@@ -1,6 +1,6 @@
 <div id="nav">
   <span id="nav-left">
-    <a href="/"><img id="logo" src="favicon.png" alt="Delta Client logo"></a>
+    <a href="/"><img id="logo" src="favicon@2x.png" alt="Delta Client logo"></a>
     <a class="link" href="/">Delta Client</a>
   </span>
   <span id="nav-right">
