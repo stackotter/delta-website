@@ -1,6 +1,18 @@
 <script>
   import Page from "$lib/Page.svelte";
   import DownloadEntry from "$lib/DownloadEntry.svelte"
+
+  async function getReleases() {
+    const res = await fetch("https://api.github.com/repos/stackotter/delta-client/releases")
+
+    if (res.ok) {
+      return await res.json()
+    } else {
+      throw new Error(await res.text())
+    }
+  }
+
+  var promise = getReleases()
 </script>
 
 <Page
@@ -9,10 +21,25 @@
   <h1>Downloads</h1>
   <p>Delta Client is still deep in development so snapshot builds are in no short supply. Head over to the <a href="https://github.com/stackotter/delta-client/releases">releases</a> page on the Delta Client GitHub for more details on each release.</p>
 
-  <div id="downloads">
-    <div class="download"><DownloadEntry isPrimary={true} downloadURL="/test" title="Snapshot 8" metadata="v0.1.0-snapshot.8 | 21 July '21"/></div>
-    <div class="download"><DownloadEntry isPrimary={false} downloadURL="/test" title="Snapshot 7" metadata="v0.1.0-snapshot.7 | 21 July '21"/></div>
-  </div>
+  {#await promise}
+    <div id="message">Loading releases from GitHub...</div>
+  {:then releases}
+    <div id="downloads">
+      {#each releases as release, i}
+        <div class="download">
+          <DownloadEntry
+            isPrimary={i == 0}
+            downloadURL={release.assets[0].browser_download_url}
+            title={release.name}
+            metadata="{release.tag_name} | {new Date(Date.parse(release.published_at)).toLocaleDateString('en-AU', {
+              year: "numeric", month: "long", day: "numeric"
+            })}"/>
+        </div>
+      {/each}
+    </div>
+  {:catch error}
+    <div id="message">Failed to load releases: "{error.message}"</div>
+  {/await}
 </Page>
 
 <style>
@@ -24,5 +51,10 @@
   .download {
     padding: 1rem 1.5em;
     border-top: 1px solid rgba(1, 1, 1, 0.3);
+  }
+
+  #message {
+    margin: auto;
+    text-align: center;
   }
 </style>

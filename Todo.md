@@ -1,8 +1,7 @@
 - [x] Add page titles
-- [ ] Favicon
+- [x] Favicon
 - [ ] Look into the weird border carry over bug
-- [ ] Supply different resolutions of images to improve first load
-- [ ] Round corners of favicon
+- [x] Round corners of favicon
 - [ ] Finish landing page with the parts past 'see more'
-- [ ] Pull release version info from github
+- [x] Pull release version info from github
 - [ ] Make responsive
