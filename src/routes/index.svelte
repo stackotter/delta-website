@@ -42,9 +42,10 @@
       <p>Since Delta Client’s conception in December of 2020, its one goal has been to be the most efficient Minecraft client. This was a result of me being annoyed at the frustrating low performance of Minecraft Java Edition on my i5 MacBook Air. I tried out Minecraft Windows 10 Edition and I instantly knew what I had to do. I had to create a Java Edition compatible client with the performance of native code.</p>
       <div id="metrics">
         {#each metrics as metric}
-          <div class="metric"><Metric name={metric.name} value={metric.value}/></div>
+          <div class="metric"><Metric name="{metric.name}*" value={metric.value}/></div>
         {/each}
       </div>
+      <p id="note">*measurement was taken on 10 render distance straight after chunks finished loading</p>
     </div>
   </div>
 
@@ -96,6 +97,10 @@
   #thanks {
     margin-top: -2rem;
     margin-bottom: 6rem;
+  }
+
+  #note {
+    font-size: 0.7rem;
   }
 
   .spacer {

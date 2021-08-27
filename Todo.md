@@ -3,6 +3,6 @@
 - [ ] Look into the weird border carry over bug
 - [ ] make images the correct sizes
 - [x] Round corners of favicon
-- [ ] Finish landing page with the parts past 'see more'
+- [x] Finish landing page with the parts past 'see more'
 - [x] Pull release version info from github
 - [ ] Make responsive
