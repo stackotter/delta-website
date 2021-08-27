@@ -30,7 +30,7 @@
           <DownloadEntry
             isPrimary={i == 0}
             downloadURL={release.assets[0].browser_download_url}
-            title={release.name}
+            title={release.name.split(" - ")[0]}
             metadata="{release.tag_name} | {new Date(Date.parse(release.published_at)).toLocaleDateString('en-AU', {
               year: "numeric", month: "long", day: "numeric"
             })}"/>
