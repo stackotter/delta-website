@@ -7,3 +7,4 @@
 - [ ] Make responsive
 - [ ] Make images the correct sizes
 - [ ] Look into the weird border carry over bug
+
