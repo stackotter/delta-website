@@ -3,6 +3,7 @@
   import Metric from "$lib/Metric.svelte";
   import PrimaryButton from "$lib/PrimaryButton.svelte";
   import { scrollTo } from "svelte-scrollto";
+  import { enlargeImage } from '../stores.js';
 
   const metrics = [
     { name: "cpu", value: "55%" },
@@ -25,7 +26,7 @@
       <a href="https://discord.gg/xZPyDbmR6k" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo"></a>
     </span>
   </div>
-  <img src="screenshot-1.png" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot">
+  <img on:click={enlargeImage} src="screenshot-1.png" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot">
   <div id="scroll-prompt" on:click={() => scrollTo({element: "#details", offset: -50})}>
     see more
   </div>
@@ -35,7 +36,7 @@
 <div id="details">
   <div class="section">
     <div class="section-left">
-      <img src="screenshot-2.png" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
+      <img on:click={enlargeImage} src="screenshot-2.png" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
     </div>
     <div class="section-right">
       <h1>Changing the meaning of speed</h1>
@@ -58,13 +59,13 @@
       <p>Just download the app, open it, wait a minute or two, login, and you’re ready to go! Yep, it’s really that simple.</p>
     </div>
     <div class="section-right">
-      <img src="screenshot-3.png" alt="Server list of Delta Client" class="screenshot">
+      <img on:click={enlargeImage} src="screenshot-3.png" alt="Server list of Delta Client" class="screenshot">
     </div>
   </div>
 
   <div class="section">
     <div class="section-left">
-      <img src="team.jpg" alt="Three Minecraft characters" class="screenshot" id="team-img">
+      <img on:click={enlargeImage} src="team.jpg" alt="Three Minecraft characters" class="screenshot" id="team-img">
     </div>
     <div class="section-right">
       <h1>The team</h1>
