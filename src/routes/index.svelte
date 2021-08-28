@@ -424,7 +424,8 @@
     }
 
     #buttons {
-      display: none;
+      justify-content: left;
+      margin-bottom: 2rem;
     }
 
     #scroll-prompt, #carat {
