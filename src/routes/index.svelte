@@ -272,7 +272,7 @@
     }
   }
 
-  /* Layout becomes linear */
+  /* Layout becomes linear (still a landing page though) */
   @media(max-width: 1140px) {
     #landing-page {
       flex-direction: column-reverse;
@@ -357,6 +357,37 @@
 
     #thanks {
       margin-top: -1rem;
+    }
+  }
+
+  @media(min-width: 1140px) and (max-height: 540px) {
+    #landing-page {
+      height: initial;
+      margin-top: 6.5rem;
+    }
+
+    #lead, #lead-screenshot {
+      margin-top: 0rem;
+    }
+
+    #scroll-prompt, #carat {
+      display: none;
+    }
+  }
+
+  /* Get rid of landing page when too short */
+  @media(min-width: 500px) and (max-width: 1140px) and (max-height: 800px) {
+    #landing-page {
+      height: initial;
+      flex-direction: column;
+    }
+
+    #lead, #lead-screenshot {
+      margin-top: 4rem;
+    }
+
+    #scroll-prompt, #carat {
+      display: none;
     }
   }
 
