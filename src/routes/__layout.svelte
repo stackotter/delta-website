@@ -7,6 +7,7 @@
 
   var disableScroll = () => {}
   var enableScroll = () => {}
+  var width
 
   onMount(() => {
     disableScroll = () => {
@@ -17,13 +18,15 @@
       document.body.style.overflow = '';
     };
   })
-  
-  $:if ($enlargedImage.presented) {
+
+  $:if ($enlargedImage.presented && width > 900) {
     disableScroll()
   } else {
     enableScroll()
   }
 </script>
+
+<svelte:window bind:outerWidth={width}/>
 
 <SvelteSeo
   title="Delta Client"/>
@@ -51,6 +54,12 @@
     justify-content: center;
     z-index: 100;
     background: #0008;
+  }
+
+  @media(max-width: 900px) {
+    #overlay {
+      display: none;
+    }
   }
 
   #overlay img {

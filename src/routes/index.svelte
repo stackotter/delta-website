@@ -504,4 +504,10 @@
       margin: 0;
     }
   }
+
+  @media(max-width: 340px) {
+    #buttons {
+      display: none;
+    }
+  }
 </style>
