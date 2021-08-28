@@ -57,4 +57,10 @@
     margin: auto;
     text-align: center;
   }
+
+  @media(max-width: 560px) {
+    .download {
+      padding: 1.3rem 1rem;
+    }
+  }
 </style>

@@ -2,12 +2,12 @@
   export let href;
 </script>
 
-<a href={href} id="primary-button">
+<a href={href} id="secondary-button">
   <slot></slot>
 </a>
 
 <style>
-  #primary-button {
+  #secondary-button {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -16,6 +16,5 @@
     font-size: 1rem;
     font-weight: 550;
     color: #8900FF;
-    padding: 0 2.5rem;
   }
 </style>

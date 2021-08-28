@@ -15,17 +15,28 @@
   </div>
 
   {#if isPrimary}
-  <div class="download-button">
+  <div id="first-button-primary" class="download-button">
     <PrimaryButton href="{downloadURL}">Download</PrimaryButton>
   </div>
+  <div id="first-button-secondary" class="download-button secondary-button">
+    <SecondaryButton href="{downloadURL}">Download</SecondaryButton>
+  </div>
   {:else}
-  <div class="download-button">
+  <div class="download-button secondary-button">
     <SecondaryButton href="{downloadURL}">Download</SecondaryButton>
   </div>
   {/if}
 </div>
 
 <style>
+  #first-button-secondary {
+    display: none;
+  }
+
+  .secondary-button {
+    padding: 0 2.5rem;
+  }
+
   .download-entry {
     display: flex;
     flex-direction: row;
@@ -48,5 +59,25 @@
     font-size: 0.8rem;
     color: #888;
     margin-top: 0.1rem;
+  }
+
+  @media(max-width: 560px) {
+    .version-metadata {
+      display: none;
+    }
+  }
+
+  @media(max-width: 440px) {
+    #first-button-primary {
+      display: none;
+    }
+
+    #first-button-secondary {
+      display: block;
+    }
+
+    .secondary-button {
+      padding: 0;
+    }
   }
 </style>
