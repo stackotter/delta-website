@@ -5,9 +5,6 @@
   import { fly, fade } from "svelte/transition";
   import { onMount } from "svelte";
 
-  var prevBodyPosition
-  var prevBodyOverflow
-
   var disableScroll = () => {}
   var enableScroll = () => {}
 
@@ -32,8 +29,8 @@
   title="Delta Client"/>
 
 {#if $enlargedImage.presented}
-  <div in:fade={{ duration: 150 }} out:fade={{ duration: 150 }} id="overlay" on:click={() => $enlargedImage.presented = false}>
-    <div id="img-container" in:fly={{ y: 400, duration: 150 }}>
+  <div in:fade={{ duration: 200 }} out:fade={{ duration: 300 }} id="overlay" on:click={() => $enlargedImage.presented = false}>
+    <div id="img-container" in:fly={{ y: 400, duration: 400 }}>
       <img class="screenshot" src={$enlargedImage.src} alt={$enlargedImage.alt} on:click|stopPropagation>
       <div id="cross"/>
     </div>

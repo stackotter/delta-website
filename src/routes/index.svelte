@@ -36,9 +36,6 @@
 <div id="details">
   <div class="section">
     <div class="section-left">
-      <img on:click={enlargeImage} src="screenshot-2.png" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
-    </div>
-    <div class="section-right">
       <h1>Changing the meaning of speed</h1>
       <p>Since Delta Client’s conception in December of 2020, its one goal has been to be the most efficient Minecraft client. This was a result of me being annoyed at the frustrating low performance of Minecraft Java Edition on my i5 MacBook Air. I tried out Minecraft Windows 10 Edition and I instantly knew what I had to do. I had to create a Java Edition compatible client with the performance of native code.</p>
       <div id="metrics">
@@ -48,33 +45,36 @@
       </div>
       <p id="note">*measurement was taken on 10 render distance straight after chunks finished loading</p>
     </div>
+    <div class="section-right">
+      <img on:click={enlargeImage} src="screenshot-2.png" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
+    </div>
   </div>
 
-  <div class="section">
+  <div class="section image-first-section">
     <div class="section-left">
+      <img on:click={enlargeImage} src="screenshot-3.png" alt="Server list of Delta Client" class="screenshot">
+    </div>
+    <div class="section-right">
       <h1>A sleek and intuitive UI</h1>
       <p>Delta Client’s UI was designed to feel right at home on macOS. It’s powered by SwiftUI which allows the client to have extremely low resource usage when not in-game.</p>
       <div class="spacer"/>
       <h1>Quick to install</h1>
       <p>Just download the app, open it, wait a minute or two, login, and you’re ready to go! Yep, it’s really that simple.</p>
     </div>
-    <div class="section-right">
-      <img on:click={enlargeImage} src="screenshot-3.png" alt="Server list of Delta Client" class="screenshot">
-    </div>
   </div>
 
   <div class="section">
     <div class="section-left">
-      <img on:click={enlargeImage} src="team.jpg" alt="Three Minecraft characters" class="screenshot" id="team-img">
-    </div>
-    <div class="section-right">
       <h1>The team</h1>
       <h2><a href="https://github.com/stackotter">@stackotter</a> — Lead developer</h2>
       <p>I’m the creator and lead developer of Delta Client. I love optimising code and my favourite programming languages are Swift and Rust.</p>
       <h2><a href="https://github.com/ninjadev64">@ninjadev64</a> — Platforms manager</h2>
-      <p>I run the Discord server and test Minecraft server for Delta Client. I'm interested in computer science, maths and Minecraft. My favourite colour is blue and my favourite food is Chicken & Avocado Tacos. I’m fluent in JavaScript, Python, Java, HTML, CSS, Bash, and Scratch. I like using :)</p>
+      <p>I run the Discord server and test Minecraft server for Delta Client. I'm interested in computer science, maths and Minecraft. I like using :)</p>
       <h2><a href="https://github.com/thegail">@thegail</a> — Plugin API developer</h2>
       <p>I'm working on some of the smaller features of Delta Client. I like to spend my time learning how the technology around us works. My favorite language is Swift.</p>
+    </div>
+    <div class="section-right">
+      <img on:click={enlargeImage} src="team.jpg" alt="Three Minecraft characters" class="screenshot" id="team-img">
     </div>
   </div>
 
@@ -122,7 +122,7 @@
   }
 
   .screenshot {
-    filter: drop-shadow(0 0.8rem 2rem #0006)
+    filter: drop-shadow(0 0.8rem 2rem #0006);
   }
 
   .section-left, .section-right {
@@ -133,7 +133,7 @@
   }
 
   #details {
-    width: 85vw;
+    width: 90vw;
     margin: auto;
     margin-top: 7rem;
   }
@@ -208,8 +208,7 @@
   }
 
   #lead {
-    width: 23vw;
-    margin-left: 2vw;
+    width: 23.5rem;
   }
 
   #heading {
@@ -254,5 +253,223 @@
     height: 2.5rem;
     width: 2.5rem;
     margin-left: 1rem;
+  }
+
+  /* Media queries (woohoo) */
+
+  /* Laptop screens (original css was made for external monitor) */
+  @media(max-width: 1412px) {
+    #details {
+      width: 95vw;
+    }
+
+    .section {
+      margin-bottom: 6rem;
+    }
+
+    #thanks {
+      margin-top: 2rem;
+    }
+  }
+
+  /* Layout becomes linear */
+  @media(max-width: 1140px) {
+    #landing-page {
+      flex-direction: column-reverse;
+    }
+
+    .section {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-left, .section-right {
+      width: 60%;
+      margin-bottom: 3rem;
+    }
+
+    .image-first-section {
+      flex-direction: column-reverse;
+    }
+
+    #lead {
+      width: 29rem; 
+      text-align: center;
+    }
+
+    #lead-screenshot {
+      width: 31rem;
+    }
+
+    #buttons {
+      justify-content: center;
+    }
+
+    #discord-button {
+      text-align: left;
+    }
+
+    #thanks {
+      margin-bottom: 4rem;
+    }
+  }
+
+  /* Minor tweaks */
+  @media(max-width: 960px) {
+    .section {
+      margin-bottom: 3rem;
+    }
+  }
+  
+  /* Minor tweaks */
+  @media(max-width: 860px) {
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-left, .section-right {
+      width: 70%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media(max-width: 685px) {
+    #landing-page {
+      flex-direction: column;
+    }
+
+    #lead {
+      width: 25rem;
+    }
+
+    #lead-screenshot {
+      display: none;
+    }
+
+    .section-left, .section-right {
+      width: 80%;
+    }
+
+    .screenshot {
+      filter: drop-shadow(0 0.8rem 1rem #0003);
+    }
+
+    #thanks {
+      margin-top: -1rem;
+    }
+  }
+
+  /* Phone */
+  @media(max-width: 500px) {
+    #lead {
+      width: calc(100% - 5rem);
+      text-align: left;
+      margin-top: 3rem;
+    }
+
+    #heading {
+      font-size: 2rem;
+    }
+
+    .section h1 {
+      font-size: 1.5rem;
+      margin-left: 0;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+    }
+
+    #lead-screenshot {
+      display: block;
+      width: calc(100% - 5rem);
+      margin-top: 1rem;
+    }
+
+    #details {
+      margin-top: 5rem;
+      width: 100%;
+    }
+
+    #buttons {
+      display: none;
+    }
+
+    #scroll-prompt, #carat {
+      display: none;
+    }
+
+    #landing-page {
+      height: initial;
+      width: 100vw;
+    }
+
+    .section-left, .section-right {
+      width: calc(100% - 5rem);
+    }
+
+    #thanks {
+      margin-top: 3.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  /* Even smaller phones */
+  @media(max-width: 400px) {
+    #heading {
+      font-size: 1.6rem;
+    }
+
+    .section h1 {
+      font-size: 1.3rem;
+      font-weight: 550;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    #lead {
+      margin-top: 2rem;
+    }
+
+    #lead, #lead-screenshot, .section-left, .section-right {
+      width: calc(100% - 3rem);
+    }
+
+    .section-left, .section-right {
+      margin-bottom: 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    #lead-screenshot {
+      margin-top: 0.5rem;
+    }
+
+    #details {
+      margin-top: 3rem;
+    }
+
+    #thanks {
+      margin-top: 0;
+    }
+
+    :global(.metric .value) {
+      font-size: 1.8rem;
+    }
+
+    #metrics {
+      justify-content: space-between;
+      width: 90%;
+    }
+
+    .metric {
+      margin: 0;
+    }
   }
 </style>
