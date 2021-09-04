@@ -6,8 +6,8 @@
   import { enlargeImage } from '../stores.js';
 
   const metrics = [
-    { name: "cpu", value: "55%" },
-    { name: "fps", value: "45" },
+    { name: "cpu*", value: "55%" },
+    { name: "fps*", value: "45" },
     { name: "starts in", value: "5s" }
   ]
 </script>
@@ -40,7 +40,7 @@
       <p>Since Delta Client’s conception in December of 2020, its one goal has been to be the most efficient Minecraft client. This was a result of me being annoyed at the frustrating low performance of Minecraft Java Edition on my i5 MacBook Air. I tried out Minecraft Windows 10 Edition and I instantly knew what I had to do. I had to create a Java Edition compatible client with the performance of native code.</p>
       <div id="metrics">
         {#each metrics as metric}
-          <div class="metric"><Metric name="{metric.name}*" value={metric.value}/></div>
+          <div class="metric"><Metric name="{metric.name}" value={metric.value}/></div>
         {/each}
       </div>
       <p id="note">*measurement was taken on 10 render distance straight after chunks finished loading</p>
@@ -425,7 +425,7 @@
 
     #buttons {
       justify-content: left;
-      margin-bottom: 2rem;
+      margin-bottom: 1.3rem;
     }
 
     #scroll-prompt, #carat {

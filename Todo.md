@@ -3,8 +3,8 @@
 - [x] Round corners of favicon
 - [x] Finish landing page with the parts past 'see more'
 - [x] Pull release version info from github
-- [ ] Fix design for internal monitor
-- [ ] Make responsive
-- [ ] Make images the correct sizes
-- [ ] Look into the weird border carry over bug
+- [x] Fix design for internal monitor
+- [x] Make responsive
+- [x] Make images the correct sizes
+- [x] Look into the weird border carry over bug
 
