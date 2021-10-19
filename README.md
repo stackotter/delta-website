@@ -1,38 +1,19 @@
-# create-svelte
+# The Delta Client website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+For an overview of Delta Client go to the [Delta Client repository](https://github.com/stackotter/delta-client). This is just the website for that project.
 
-## Creating a project
+## Contributing
 
-If you're seeing this, you've probably already done this step. Congrats!
+The [Delta Client contributing guidelines](https://github.com/stackotter/delta-client) should have all the information you need to get started contributing for this website.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Here's the simplest way to setup the development environment;
 
 ```bash
-npm run dev
+# setup
+git clone https://github.com/stackotter/delta-website # or your fork
+cd delta-website
+npm install
 
-# or start the server and open the app in a new browser tab
+# start the development server and open it in the browser automatically
 npm run dev -- --open
 ```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
