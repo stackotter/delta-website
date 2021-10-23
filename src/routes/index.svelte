@@ -67,11 +67,11 @@
   <div class="section">
     <div class="section-left">
       <h1>The team</h1>
-      <h2><img alt="ninjadev64" src="https://avatars.githubusercontent.com/stackotter" class="profile-photo" /> <a href="https://github.com/stackotter">@stackotter</a> — Lead developer</h2>
+      <h2><a href="https://github.com/stackotter">@stackotter</a> — Lead developer</h2>
       <p>I’m the creator and lead developer of Delta Client. I love optimising code and my favourite programming languages are Swift and Rust.</p>
-      <h2><img alt="ninjadev64" src="https://avatars.githubusercontent.com/ninjadev64" class="profile-photo" /> <a href="https://github.com/ninjadev64">@ninjadev64</a> — Platforms manager</h2>
+      <h2><a href="https://github.com/ninjadev64">@ninjadev64</a> — Platforms manager</h2>
       <p>I run the Discord server and test Minecraft server for Delta Client. I don't really have a favourite programming language - but I use Python and JavaScript the most. <a href="https://amansprojects.com">https://amansprojects.com/</a></p>
-      <h2><img alt="ninjadev64" src="https://avatars.githubusercontent.com/thegail" class="profile-photo" /> <a href="https://github.com/thegail">@thegail</a> — Plugin API developer</h2>
+      <h2><a href="https://github.com/thegail">@thegail</a> — Plugin API developer</h2>
       <p>I'm working on some of the smaller features of Delta Client. I like to spend my time learning how the technology around us works. My favorite language is Swift.</p>
     </div>
     <div class="section-right">
@@ -88,13 +88,6 @@
 </div>
 
 <style>
-  .profile-photo {
-    clip-path: circle();
-    vertical-align: middle;
-    width: 2rem !important;
-    height: 2rem;
-  }
-  
   .section {
     width: 100%;
     display: flex;
