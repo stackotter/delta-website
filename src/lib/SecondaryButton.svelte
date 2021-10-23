@@ -1,6 +1,4 @@
-<script>
-  export let href;
-</script>
+<script> export let href; </script>
 
 <a href={href} id="secondary-button">
   <slot></slot>

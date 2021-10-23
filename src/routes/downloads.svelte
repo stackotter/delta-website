@@ -27,15 +27,14 @@
         <div class="download"><DownloadEntry
           isPrimary={true}
           downloadURL="https://nightly.link/stackotter/delta-client/workflows/main/dev/DeltaClient.zip"
-          title="Latest unstable build"
+          title="Latest build"
           metadata="Branch: dev"
         /></div>
         <div class="download" style="border-bottom: 1px solid rgba(1, 1, 1, 0.3);"><DownloadEntry
           isPrimary={false}
           downloadURL="https://github.com/stackotter/delta-client/actions"
-          title="Previous unstable builds"
+          title="Previous builds"
           metadata="All branches"
-          buttonText="Downloads"
         /></div>
       </div>
       <div id="releases">
