@@ -14,7 +14,7 @@
 
 <Page
   title="Downloads - Delta Client"
-  description="Delta Client is still deep in development so snapshot builds are in no short supply. Head over to the releases page on the Delta Client GitHub for more details on each release.">
+  description="Delta Client is still deep in development so snapshot builds are in no short supply. Head over to the releases page on the Delta Client GitHub repository for more details on each release.">
   <h1>Downloads</h1>
   <p>Delta Client is still deep in development so snapshot builds are in no short supply. Head over to the <a href="https://github.com/stackotter/delta-client/releases">releases</a> page on the Delta Client GitHub repository for more details on each release.</p>
 
