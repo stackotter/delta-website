@@ -9,12 +9,13 @@
     { name: "cpu*", value: "55%" },
     { name: "fps*", value: "45" },
     { name: "starts in", value: "5s" }
-  ]
+  ];
 </script>
 
 <SvelteSeo
   title="Delta Client"
-  description="A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS."/>
+  description="A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS."
+/>
 
 <div id="landing-page">
   <div id="lead">
@@ -37,7 +38,7 @@
   <div class="section">
     <div class="section-left">
       <h1>Changing the meaning of speed</h1>
-      <p>Since Delta Client’s conception in December of 2020, its one goal has been to be the most efficient Minecraft client. This was a result of me being annoyed at the frustrating low performance of Minecraft Java Edition on my i5 MacBook Air. I tried out Minecraft Windows 10 Edition and I instantly knew what I had to do. I had to create a Java Edition compatible client with the performance of native code.</p>
+      <p>Since Delta Client’s conception in December 2020, its one goal has been to be the most efficient Minecraft client. This was a result of me being annoyed at the frustrating low performance of Minecraft Java Edition on my i5 MacBook Air. I tried out Minecraft Windows 10 Edition and I instantly knew what I had to do. I had to create a Java Edition compatible client with the performance of native code.</p>
       <div id="metrics">
         {#each metrics as metric}
           <div class="metric"><Metric name="{metric.name}" value={metric.value}/></div>
@@ -69,7 +70,7 @@
       <h2><a href="https://github.com/stackotter">@stackotter</a> — Lead developer</h2>
       <p>I’m the creator and lead developer of Delta Client. I love optimising code and my favourite programming languages are Swift and Rust.</p>
       <h2><a href="https://github.com/ninjadev64">@ninjadev64</a> — Platforms manager</h2>
-      <p>I run the Discord server and test Minecraft server for Delta Client. I'm interested in computer science, maths and Minecraft. I like using :)</p>
+      <p>I run the Discord server and test Minecraft server for Delta Client. I don't really have a favourite programming language - but I use Python and JavaScript the most. <a href="https://amansprojects.com">https://amansprojects.com/</a></p>
       <h2><a href="https://github.com/thegail">@thegail</a> — Plugin API developer</h2>
       <p>I'm working on some of the smaller features of Delta Client. I like to spend my time learning how the technology around us works. My favorite language is Swift.</p>
     </div>

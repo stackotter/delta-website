@@ -6,6 +6,7 @@
   export let downloadURL;
   export let title;
   export let metadata;
+  export let buttonText = "Download";
 </script>
 
 <div class="download-entry">
@@ -16,14 +17,14 @@
 
   {#if isPrimary}
   <div id="first-button-primary" class="download-button">
-    <PrimaryButton href="{downloadURL}">Download</PrimaryButton>
+    <PrimaryButton href="{downloadURL}">{buttonText}</PrimaryButton>
   </div>
   <div id="first-button-secondary" class="download-button secondary-button">
-    <SecondaryButton href="{downloadURL}">Download</SecondaryButton>
+    <SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
   </div>
   {:else}
   <div class="download-button secondary-button">
-    <SecondaryButton href="{downloadURL}">Download</SecondaryButton>
+    <SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
   </div>
   {/if}
 </div>
