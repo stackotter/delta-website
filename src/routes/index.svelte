@@ -27,7 +27,7 @@
       <a href="https://discord.gg/xZPyDbmR6k" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo"></a>
     </span>
   </div>
-  <img on:click={enlargeImage} src="screenshot-1.png" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot">
+  <img on:click={enlargeImage} src="screenshot-1.webp" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot">
   <div id="scroll-prompt" on:click={() => scrollTo({element: "#details", offset: -50})}>
     see more
   </div>
@@ -47,13 +47,13 @@
       <p id="note">*measurement was taken on 10 render distance straight after chunks finished loading</p>
     </div>
     <div class="section-right">
-      <img on:click={enlargeImage} src="screenshot-2.png" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
+      <img on:click={enlargeImage} src="screenshot-2.webp" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
     </div>
   </div>
 
   <div class="section image-first-section">
     <div class="section-left">
-      <img on:click={enlargeImage} src="screenshot-3.png" alt="Server list of Delta Client" class="screenshot">
+      <img on:click={enlargeImage} src="screenshot-3.webp" alt="Server list of Delta Client" class="screenshot">
     </div>
     <div class="section-right">
       <h1>A sleek and intuitive UI</h1>
@@ -75,7 +75,7 @@
       <p>I'm working on some of the smaller features of Delta Client. I like to spend my time learning how the technology around us works. My favorite language is Swift.</p>
     </div>
     <div class="section-right">
-      <img on:click={enlargeImage} src="team.jpg" alt="Three Minecraft characters" class="screenshot" id="team-img">
+      <img on:click={enlargeImage} src="team.webp" alt="Three Minecraft characters" class="screenshot" id="team-img">
     </div>
   </div>
 
