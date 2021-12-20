@@ -14,7 +14,8 @@
 
 <SvelteSeo
   title="Delta Client"
-  description="A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS."/>
+  description="A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS."
+/>
 
 <div id="landing-page">
   <div id="lead">
@@ -26,7 +27,7 @@
       <a href="https://discord.gg/xZPyDbmR6k" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo"></a>
     </span>
   </div>
-  <img on:click={enlargeImage} src="screenshot-1.png" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot">
+  <img on:click={enlargeImage} src="screenshot-1.webp" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot">
   <div id="scroll-prompt" on:click={() => scrollTo({element: "#details", offset: -50})}>
     see more
   </div>
@@ -46,13 +47,13 @@
       <p id="note">*measurement was taken on 10 render distance straight after chunks finished loading</p>
     </div>
     <div class="section-right">
-      <img on:click={enlargeImage} src="screenshot-2.png" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
+      <img on:click={enlargeImage} src="screenshot-2.webp" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
     </div>
   </div>
 
   <div class="section image-first-section">
     <div class="section-left">
-      <img on:click={enlargeImage} src="screenshot-3.png" alt="Server list of Delta Client" class="screenshot">
+      <img on:click={enlargeImage} src="screenshot-3.webp" alt="Server list of Delta Client" class="screenshot">
     </div>
     <div class="section-right">
       <h1>A sleek and intuitive UI</h1>
@@ -69,12 +70,12 @@
       <h2><a href="https://github.com/stackotter">@stackotter</a> — Lead developer</h2>
       <p>I’m the creator and lead developer of Delta Client. I love optimising code and my favourite programming languages are Swift and Rust.</p>
       <h2><a href="https://github.com/ninjadev64">@ninjadev64</a> — Platforms manager</h2>
-      <p>I run the Discord server and test Minecraft server for Delta Client. I'm interested in computer science, maths and Minecraft. I like using :)</p>
+      <p>I run the Discord server and test Minecraft server for Delta Client. I don't really have a favourite programming language - but I use Python and JavaScript the most. <a href="https://amansprojects.com">https://amansprojects.com/</a></p>
       <h2><a href="https://github.com/thegail">@thegail</a> — Plugin API developer</h2>
       <p>I'm working on some of the smaller features of Delta Client. I like to spend my time learning how the technology around us works. My favorite language is Swift.</p>
     </div>
     <div class="section-right">
-      <img on:click={enlargeImage} src="team.jpg" alt="Three Minecraft characters" class="screenshot" id="team-img">
+      <img on:click={enlargeImage} src="team.webp" alt="Three Minecraft characters" class="screenshot" id="team-img">
     </div>
   </div>
 
