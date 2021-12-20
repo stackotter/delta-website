@@ -7,8 +7,8 @@
 
   const metrics = [
     { name: "cpu*", value: "55%" },
-    { name: "fps*", value: "45" },
-    { name: "starts in", value: "5s" }
+    { name: "fps*", value: "100" },
+    { name: "starts in", value: "1.4s" }
   ]
 </script>
 
@@ -37,7 +37,7 @@
   <div class="section">
     <div class="section-left">
       <h1>Changing the meaning of speed</h1>
-      <p>Since Delta Client’s conception in December of 2020, its one goal has been to be the most efficient Minecraft client. This was a result of me being annoyed at the frustrating low performance of Minecraft Java Edition on my i5 MacBook Air. I tried out Minecraft Windows 10 Edition and I instantly knew what I had to do. I had to create a Java Edition compatible client with the performance of native code.</p>
+      <p>Delta Client has 3x higher fps, 2.5x lower cpu usage, starts faster than the Minecraft launcher and loads chunk as smooth as butter. Lag will no longer be an excuse for a lack of skills.</p>
       <div id="metrics">
         {#each metrics as metric}
           <div class="metric"><Metric name="{metric.name}" value={metric.value}/></div>
