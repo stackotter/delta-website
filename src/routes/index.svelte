@@ -4,6 +4,8 @@
   import PrimaryButton from "$lib/PrimaryButton.svelte";
   import { scrollTo } from "svelte-scrollto";
   import { enlargeImage } from '../stores.js';
+  import Contributors from "$lib/Contributors.svelte";
+  import Sponsors from "$lib/Sponsors.svelte";
 
   const metrics = [
     { name: "cpu*", value: "55%" },
@@ -66,13 +68,10 @@
 
   <div class="section">
     <div class="section-left">
-      <h1>The team</h1>
-      <h2><a href="https://github.com/stackotter">@stackotter</a> — Lead developer</h2>
-      <p>I’m the creator and lead developer of Delta Client. I love optimising code and my favourite programming languages are Swift and Rust.</p>
-      <h2><a href="https://github.com/ninjadev64">@ninjadev64</a> — Platforms manager</h2>
-      <p>I run the Discord server and test Minecraft server for Delta Client. I don't really have a favourite programming language - but I use Python and JavaScript the most. <a href="https://amansprojects.com">https://amansprojects.com/</a></p>
-      <h2><a href="https://github.com/thegail">@thegail</a> — Plugin API developer</h2>
-      <p>I'm working on some of the smaller features of Delta Client. I like to spend my time learning how the technology around us works. My favorite language is Swift.</p>
+      <h1>Primary Sponsors</h1>
+      <Sponsors type="Primary"/>
+      <h1>Contributors</h1>
+      <Contributors/>
     </div>
     <div class="section-right">
       <img on:click={enlargeImage} src="team.webp" alt="Three Minecraft characters" class="screenshot" id="team-img">
