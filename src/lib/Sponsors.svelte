@@ -5,7 +5,7 @@
             "github": "https://github.com/FrankTCA",
             "website": "https://infotoast.org/",
             "type": "Primary"
-        }
+        },
     ];
 
     export let type;
@@ -25,20 +25,12 @@
 
 <style>
     #sponsors {
-        margin-bottom: 1rem;
-        margin-top: 1rem;
         display: grid;
         grid-gap: 0.5rem;
         grid-auto-flow: row;
         grid-template-columns: repeat(auto-fill, 4rem);
         width: 100%;
-        margin: 0.5rem 0;
-    }
-
-    .sponsor {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        margin: 1rem 0;
     }
 
     .avatar {
@@ -46,10 +38,5 @@
         height: 4rem;
         border-radius: 50%;
         margin-right: 0.5rem;
-    }
-
-    h2 {
-        margin: 0;
-        padding: 0;
     }
 </style>

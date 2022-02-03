@@ -59,18 +59,20 @@
     </div>
     <div class="section-right">
       <h1>A sleek and intuitive UI</h1>
-      <p>Delta Client’s UI was designed to feel right at home on macOS. It’s powered by SwiftUI which allows the client to have extremely low resource usage when not in-game.</p>
+      <p>Delta Client's UI was designed to feel right at home on macOS. It's powered by SwiftUI which allows the client to have extremely low resource usage when not in-game.</p>
       <div class="spacer"/>
       <h1>Quick to install</h1>
-      <p>Just download the app, open it, wait a minute or two, login, and you’re ready to go! Yep, it’s really that simple.</p>
+      <p>Just download the app, open it, wait a minute or two, login, and you're ready to go! Yep, it's really that simple.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="section-left">
       <h1>Primary Sponsors</h1>
+      <div>The financial support of these people helps me to continue working on the project.</div>
       <Sponsors type="Primary"/>
       <h1>Contributors</h1>
+      <div>The contributions of these developers help speed up the development of the client.</div>
       <Contributors/>
     </div>
     <div class="section-right">
