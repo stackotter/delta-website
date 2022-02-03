@@ -68,20 +68,18 @@
 
   <div class="section">
     <div class="section-left">
+      
+    </div>
+  </div>
+
+  <div class="section" id="thanks">
+    <div class="section-left">
       <h1>Primary Sponsors</h1>
       <div>The financial support of these people helps me to continue working on the project.</div>
       <Sponsors type="Primary"/>
       <h1>Contributors</h1>
       <div>The contributions of these developers help speed up the development of the client.</div>
       <Contributors/>
-    </div>
-    <div class="section-right">
-      <img on:click={enlargeImage} src="team.webp" alt="Three Minecraft characters" class="screenshot" id="team-img">
-    </div>
-  </div>
-
-  <div class="section" id="thanks">
-    <div class="section-left">
       <h1>Thanks for dropping by!</h1>
       <p>Thank you for checking out Delta Client. The dream is still far away, but we are constantly getting closer to making the fastest Minecraft client, and if that catches your imagination, feel free to drop by in our <a href="https://discord.gg/xZPyDbmR6k">Discord</a> and say hi :)</p>
     </div>

@@ -15,21 +15,23 @@
         })
 </script>
 
-{#if !hasErrored}
-    {#if contributors}
-        <div id="contributors">
-            {#each contributors as contributor}
-                <a href={contributor.url} class="contributor" title={contributor.login}>
-                    <img class="avatar" src="{contributor.avatar_url}&size=128" alt="{contributor.login}'s GitHub avatar">
-                </a>
-            {/each}
-        </div>
+<div id="container">
+    {#if !hasErrored}
+        {#if contributors}
+            <div id="contributors">
+                {#each contributors as contributor}
+                    <a href={contributor.html_url} class="contributor" title={contributor.login}>
+                        <img class="avatar" src="{contributor.avatar_url}&size=128" alt="{contributor.login}'s GitHub avatar">
+                    </a>
+                {/each}
+            </div>
+        {:else}
+            <div>Loading contributors...</div>
+        {/if}
     {:else}
-        <div>Loading contributors...</div>
+        <div>Failed to load contributors from GitHub.</div>
     {/if}
-{:else}
-    <div>Failed to load contributors from GitHub.</div>
-{/if}
+</div>
 
 <style>
     #contributors {
@@ -38,7 +40,11 @@
         grid-auto-flow: row;
         grid-template-columns: repeat(auto-fill, 4rem);
         width: 100%;
-        margin: 1rem 0;
+    }
+
+    #container {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
     }
 
     .contributor {
