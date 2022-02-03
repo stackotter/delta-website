@@ -4,7 +4,7 @@
 
 <Page
   title="Plugins - Delta Client"
-  description="An easy to use plugin system is coming soon. Join our Discord for regular updates on the progress of the plugin API. @thegail is the main developer of the plugin system. This page will contain a list of all officially supported plugins.">
+  description="The official Delta Client repository. Once the client is more feature complete, this page will contain a list of all officially supported plugins.">
   <h1>Plugins</h1>
-  <p>An easy to use plugin system is <span class="emphasis">coming soon</span>. Join our <a href="https://discord.gg/xZPyDbmR6k">Discord</a> for regular updates on the progress of the plugin API. <a href="https://github.com/thegail">@thegail</a> is the main developer of the plugin system. This page will contain a list of all officially supported plugins.</p>
+  <p>Once the client is more feature complete, this page will contain a list of all officially supported plugins. Join our <a href="https://discord.gg/xZPyDbmR6k">Discord</a> for regular updates on the progress of the client and the plugin API.</p>
 </Page>
