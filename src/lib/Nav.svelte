@@ -38,6 +38,7 @@
     <a class="link" href="/">Delta Client</a>
   </span>
   <span class="nav-right">
+    <a class="link" href="/sponsor">Sponsor</a>
     <a class="link" href="/downloads">Downloads</a>
     <a class="link" href="/plugins">Plugins</a>
     <a class="link" href="/docs">Docs</a>
@@ -56,6 +57,7 @@
     <div id="overlay" in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
       <ul in:fly={{ y: 250, duration: 400 }} out:fly={{ y: 250, duration: 400 }}>
         <li><a on:click={closeMenu} href="/">Home</a></li>
+        <li><a on:click={closeMenu} href="/sponsor">Sponsor</a></li>
         <li><a on:click={closeMenu} href="/downloads">Downloads</a></li>
         <li><a on:click={closeMenu} href="/plugins">Plugins</a></li>
         <li><a on:click={closeMenu} href="/docs">Docs</a></li>
@@ -175,7 +177,7 @@
   }
 
   /* Change to hamburger menu */
-  @media(max-width: 600px) {
+  @media(max-width: 720px) {
     #desktop-nav {
       display: none;
     }

@@ -83,7 +83,7 @@
     </div>
     <div class="section-left">
       <h1>Sponsoring Delta Client</h1>
-      <div>To help fund the development of Delta Client, feel free to sponsor me (stackotter, the main developer) on GitHub.</div>
+      <div>Delta Client's development is funded purely through sponsorship. All sponsorships go to stackotter (the main developer) and help him spend more time on the development of Delta Client. Every single sponsorship and one-time donation is greatly appreciated.</div>
       <iframe class="sponsor-button" src="https://github.com/sponsors/stackotter/button" title="Sponsor stackotter" height="35" width="116" style="border: 0;"></iframe>
       <h1>Primary Sponsors</h1>
       <div>The financial support of these people helps me to continue working on the project.</div>
