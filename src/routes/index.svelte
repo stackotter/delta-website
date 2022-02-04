@@ -72,14 +72,27 @@
     </div>
   </div>
 
-  <div class="section" id="thanks">
+  <div class="section" id="contribution-section">
+    <div class="section-right">
+      <h1>Contributing</h1>
+      <div class="paragraph">There are many ways to contribute to Delta Client. Any help with developing the client, the website or Swift Bundler is always greatly appreciated.</div>
+      <div class="paragraph last-paragraph">To get started, read <a href="https://github.com/stackotter/delta-client/blob/main/Contributing.md">the Delta Client contributing guidelines</a>.</div>
+      <h1>Contributors</h1>
+      <div>The following developers have helped with the development of Delta Client.</div>
+      <Contributors/>
+    </div>
     <div class="section-left">
+      <h1>Sponsoring Delta Client</h1>
+      <div>To help fund the development of Delta Client, feel free to sponsor me (stackotter, the main developer) on GitHub.</div>
+      <iframe class="sponsor-button" src="https://github.com/sponsors/stackotter/button" title="Sponsor stackotter" height="35" width="116" style="border: 0;"></iframe>
       <h1>Primary Sponsors</h1>
       <div>The financial support of these people helps me to continue working on the project.</div>
       <Sponsors type="Primary"/>
-      <h1>Contributors</h1>
-      <div>The contributions of these developers help speed up the development of the client.</div>
-      <Contributors/>
+    </div>
+  </div>
+
+  <div class="section" id="last-section">
+    <div class="section-left">
       <h1>Thanks for dropping by!</h1>
       <p>Thank you for checking out Delta Client. The dream is still far away, but we are constantly getting closer to making the fastest Minecraft client, and if that catches your imagination, feel free to drop by in our <a href="https://discord.gg/xZPyDbmR6k">Discord</a> and say hi :)</p>
     </div>
@@ -87,6 +100,15 @@
 </div>
 
 <style>
+  #contribution-section {
+    align-items: baseline;
+  }
+
+  .sponsor-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
   .section {
     width: 100%;
     display: flex;
@@ -95,9 +117,17 @@
     margin-bottom: 8rem;
   }
 
-  #thanks {
-    margin-top: -2rem;
-    margin-bottom: 6rem;
+  #last-section {
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+  }
+
+  .paragraph {
+    margin-bottom: 0.5rem;
+  }
+
+  .last-paragraph {
+    margin-bottom: 1.3rem;
   }
 
   #note {
@@ -115,10 +145,6 @@
 
   .section img {
     width: 100%;
-  }
-
-  #team-img {
-    border-radius: 0.5rem;
   }
 
   .screenshot {
@@ -267,7 +293,7 @@
       margin-bottom: 6rem;
     }
 
-    #thanks {
+    #last-section {
       margin-top: 2rem;
     }
   }
@@ -275,6 +301,11 @@
   /* Layout becomes linear (still a landing page though) */
   @media(max-width: 1140px) {
     #landing-page {
+      flex-direction: column-reverse;
+    }
+
+    #contribution-section {
+      align-items: center;
       flex-direction: column-reverse;
     }
 
@@ -310,7 +341,7 @@
       text-align: left;
     }
 
-    #thanks {
+    #last-section {
       margin-bottom: 4rem;
     }
   }
@@ -355,7 +386,7 @@
       filter: drop-shadow(0 0.8rem 1rem #0003);
     }
 
-    #thanks {
+    #last-section {
       margin-top: -1rem;
     }
   }
@@ -441,7 +472,7 @@
       width: calc(100% - 5rem);
     }
 
-    #thanks {
+    #last-section {
       margin-top: 3.5rem;
       margin-bottom: 2rem;
     }
@@ -487,7 +518,7 @@
       margin-top: 3rem;
     }
 
-    #thanks {
+    #last-section {
       margin-top: 0;
     }
 

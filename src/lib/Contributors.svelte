@@ -43,8 +43,7 @@
     }
 
     #container {
-        margin-top: 1rem;
-        margin-bottom: 4rem;
+        margin: 1rem 0;
     }
 
     .contributor {
