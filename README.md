@@ -1,4 +1,4 @@
-# [The Delta Client website](https://delta.stackotter.dev)
+# [The Delta Client website](https://deltaclient.app)
 
 For an overview of Delta Client go to the [Delta Client repository](https://github.com/stackotter/delta-client). This is just the website for that project.
 
