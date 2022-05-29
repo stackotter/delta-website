@@ -8,7 +8,7 @@
   description="Delta Client is still deep in development so only automated development builds are provided.">
   <h1>Downloads</h1>
   <p>Delta Client is still deep in development so only automated development builds are provided.</p>
-  <p>These automated development builds are available on Delta Client's <a href="https://github.com/stackotter/delta-client/actions/workflows/main.yml?query=branch%3Amain">GitHub Actions page</a>. Sadly a GitHub account is required to download any builds due to a limitation of GitHub.</p>
+  <p>These automated development builds are available on Delta Client's <a href="https://github.com/stackotter/delta-client/actions/workflows/build.yml">GitHub Actions page</a>. Sadly a GitHub account is required to download any builds due to a limitation of GitHub.</p>
 </Page>
 
 <style>
