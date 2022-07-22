@@ -26,7 +26,7 @@
     <span id="buttons">
       <PrimaryButton href="/downloads">Download</PrimaryButton>
       <a href="https://github.com/stackotter/delta-client" id="github-button" class="icon-button"><img src="github.png" alt="GitHub logo"></a>
-      <a href="https://discord.gg/xZPyDbmR6k" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo"></a>
+      <a href="/discord" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo"></a>
     </span>
   </div>
   <img on:click={enlargeImage} src="screenshot-1.webp" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot">
@@ -94,7 +94,7 @@
   <div class="section" id="last-section">
     <div class="section-left">
       <h1>Thanks for dropping by!</h1>
-      <p>Thank you for checking out Delta Client. The dream is still far away, but we are constantly getting closer to making the fastest Minecraft client, and if that catches your imagination, feel free to drop by in our <a href="https://discord.gg/xZPyDbmR6k">Discord</a> and say hi :)</p>
+      <p>Thank you for checking out Delta Client. The dream is still far away, but we are constantly getting closer to making the fastest Minecraft client, and if that catches your imagination, feel free to drop by in our <a href="/discord">Discord</a> and say hi :)</p>
     </div>
   </div>
 </div>
