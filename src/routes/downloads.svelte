@@ -33,7 +33,7 @@
 	</p>
 	<h2>Builds</h2>
 	{#if branches == null}
-    <p style="margin-top: 3rem;">Loading repository information...</p>
+    <p>Loading repository information...</p>
 	{:else}
 		<div id="downloads">
 			{#each branches as branch, i}
@@ -59,7 +59,6 @@
 	}
 
 	#downloads {
-		margin-top: 3rem;
 		border-bottom: 1px solid rgba(1, 1, 1, 0.3);
 	}
 
