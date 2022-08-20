@@ -66,12 +66,6 @@
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-left">
-      
-    </div>
-  </div>
-
   <div class="section" id="contribution-section">
     <div class="section-right">
       <h1>Contributing</h1>
@@ -325,7 +319,7 @@
     }
 
     #lead {
-      width: 29rem; 
+      width: 29rem;
       text-align: center;
     }
 
@@ -352,7 +346,7 @@
       margin-bottom: 3rem;
     }
   }
-  
+
   /* Minor tweaks */
   @media(max-width: 860px) {
     .section {
