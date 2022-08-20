@@ -5,14 +5,14 @@
   export let isPrimary = false;
   export let downloadURL;
   export let title;
-  export let metadata;
   export let buttonText = "Download";
+  export let commit;
 </script>
 
 <div class="download-entry">
   <div class="version-description">
     <div class="version-title">{title}</div>
-    <div class="version-metadata">{metadata}</div>
+    <div class="version-metadata">commit: <a class="commit-link" href={"https://github.com/stackotter/delta-client/commit/" + commit}>{commit}</a></div>
   </div>
 
   {#if isPrimary}
@@ -30,6 +30,12 @@
 </div>
 
 <style>
+  .commit-link {
+    font-weight: medium;
+    text-decoration: underline;
+    color: #888;
+  }
+
   #first-button-secondary {
     display: none;
   }
