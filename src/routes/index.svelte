@@ -172,7 +172,7 @@
 
   #landing-page {
     height: calc(100vh - 4rem);
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
