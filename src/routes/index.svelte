@@ -46,7 +46,7 @@
           <div class="metric"><Metric name="{metric.name}" value={metric.value}/></div>
         {/each}
       </div>
-      <p id="note">*measurement was taken on 10 render distance straight after chunks finished loading</p>
+      <p id="note">*measurement was taken on 10 render distance straight after chunks finished loading on an i5 Macbook Air</p>
     </div>
     <div class="section-right">
       <img on:click={enlargeImage} src="screenshot-2.webp" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
