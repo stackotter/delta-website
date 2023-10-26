@@ -2,11 +2,14 @@
 	import Page from "$lib/Page.svelte";
 	import DownloadEntry from "$lib/DownloadEntry.svelte";
 
+	import { onMount } from "svelte";
+
 	let branches = null;
-	fetch("https://api.github.com/repos/stackotter/delta-client/branches").then(async (response) => {
+	onMount(async () => {
+		const response = await fetch("https://api.github.com/repos/stackotter/delta-client/branches");
 		const json = await response.json();
 		branches = [];
-		for (var i = 0; i < json.length; i++) {
+		for (let i = 0; i < json.length; i++) {
 			let name = json[i].name;
 			let obj = {
 				name: name,
@@ -31,7 +34,7 @@
 	
 	<h2>Builds</h2>
 	{#if branches == null}
-	<p>Loading repository information...</p>
+		<p>Loading repository information...</p>
 	{:else}
 		<div id="downloads">
 			{#each branches as branch, i}

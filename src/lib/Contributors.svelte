@@ -1,36 +1,19 @@
-<script>
-	const url = "https://api.github.com/repos/stackotter/delta-client/contributors";
-
-	let contributors = undefined;
-	let hasErrored = false;
-
-	(async () => {
-		try {
-			const res = await fetch(url);
-			contributors = await res.json();
-		} catch (e) {
-			hasErrored = true;
-			console.error(e);
-		}
-	})();
-</script>
-
 <div id="container">
-	{#if !hasErrored}
-		{#if contributors}
+	{#await fetch("https://api.github.com/repos/stackotter/delta-client/contributors")}
+		<div>Loading contributors...</div>
+	{:then response}
+		{#await response.json() then contributors}
 			<div id="contributors">
 				{#each contributors as contributor}
 					<a href={contributor.html_url} class="contributor" title={contributor.login}>
-						<img class="avatar" src="{contributor.avatar_url}&size=128" alt="{contributor.login}'s GitHub avatar">
+						<img class="avatar" src="{contributor.avatar_url}&size=128" alt="{contributor.login}'s GitHub avatar" />
 					</a>
 				{/each}
 			</div>
-		{:else}
-			<div>Loading contributors...</div>
-		{/if}
-	{:else}
+		{/await}
+	{:catch}
 		<div>Failed to load contributors from GitHub.</div>
-	{/if}
+	{/await}
 </div>
 
 <style>
