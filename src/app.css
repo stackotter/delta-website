@@ -1,0 +1,67 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	background: white;
+}
+
+.emphasis {
+	font-style: italic;
+	font-weight: bolder;
+}
+
+:root {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: normal;
+	color: black;
+	background: white;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 550;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 1rem;
+	margin-left: -2px;
+}
+
+h2 {
+	font-size: 1.4rem;
+	font-weight: 550;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 0rem;
+}
+
+p {
+	font-family: 'Work Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #8900FF;
+}
+
+/* Phone */
+@media(max-width: 500px) {
+	h1 {
+		font-size: 1.5rem;
+		margin-left: -1px;
+	}
+
+	h2 {
+		font-size: 1.3rem;
+	}
+}
+
+/* Small phones */
+@media(max-width: 400px) {
+	h1 {
+		font-size: 1.3rem;
+		font-weight: 550;
+	}
+
+	h2 {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+}

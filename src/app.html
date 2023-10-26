@@ -1,93 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="color-scheme" content="dark" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="color-scheme" content="dark">
-  <link rel="icon" href="/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+			rel="stylesheet"
+		/>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
-    rel="stylesheet">
+		%svelte.head%
+	</head>
 
-  %svelte.head%
-</head>
-
-<body>
-  <div id="svelte">%svelte.body%</div>
-</body>
-
-<style>
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    background: white;
-  }
-
-  .emphasis {
-    font-style: italic;
-    font-weight: bolder;
-  }
-
-  :root {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: normal;
-    color: black;
-    background: white;
-  }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 550;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 1rem;
-    margin-left: -2px;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    font-weight: 550;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 0rem;
-  }
-
-  p {
-    font-family: 'Work Sans', sans-serif;
-  }
-
-  a {
-    text-decoration: none;
-    color: #8900FF;
-  }
-
-  /* Phone */
-  @media(max-width: 500px) {
-    h1 {
-      font-size: 1.5rem;
-      margin-left: -1px;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-    }
-  }
-
-  /* Small phones */
-  @media(max-width: 400px) {
-    h1 {
-      font-size: 1.3rem;
-      font-weight: 550;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
-  }
-</style>
-
+	<body>
+		<div id="svelte">%svelte.body%</div>
+	</body>
 </html>

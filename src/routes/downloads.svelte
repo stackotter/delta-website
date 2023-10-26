@@ -1,25 +1,24 @@
 <script>
-	import Page from '$lib/Page.svelte';
-	import DownloadEntry from '$lib/DownloadEntry.svelte';
+	import Page from "$lib/Page.svelte";
+	import DownloadEntry from "$lib/DownloadEntry.svelte";
 
-	var branches = null;
-	fetch('https://api.github.com/repos/stackotter/delta-client/branches').then((response) => {
-		response.json().then((json) => {
-			branches = [];
-			for (var i = 0; i < json.length; i++) {
-				let name = json[i].name;
-				let obj = {
-					name: name,
-					commit: json[i].commit.sha.slice(0, 7),
-					commitURL: json[i].commit.url
-				};
-				if (name == 'main') {
-					branches.unshift(obj);
-				} else {
-					branches.push(obj);
-				}
+	let branches = null;
+	fetch("https://api.github.com/repos/stackotter/delta-client/branches").then(async (response) => {
+		const json = await response.json();
+		branches = [];
+		for (var i = 0; i < json.length; i++) {
+			let name = json[i].name;
+			let obj = {
+				name: name,
+				commit: json[i].commit.sha.slice(0, 7),
+				commitURL: json[i].commit.url
+			};
+			if (name == "main") {
+				branches.unshift(obj);
+			} else {
+				branches.push(obj);
 			}
-		});
+		}
 	});
 </script>
 
@@ -28,21 +27,22 @@
 	description="Delta Client is still deep in development so only automated development builds are provided."
 >
 	<h1>Downloads</h1>
-	<p>
-		Delta Client is still deep in development so only automated development builds are provided.
-	</p>
+	<p>Delta Client is still deep in development so only automated development builds are provided.</p>
+	
 	<h2>Builds</h2>
 	{#if branches == null}
-    <p>Loading repository information...</p>
+	<p>Loading repository information...</p>
 	{:else}
 		<div id="downloads">
 			{#each branches as branch, i}
 				<div class="download">
 					<DownloadEntry
 						title={branch.name}
-						downloadURL={'https://backend.deltaclient.app/download/' +
+						downloadURL={
+							"https://backend.deltaclient.app/download/" +
 							branch.name +
-							'/latest/DeltaClient.app.zip'}
+							"/latest/DeltaClient.app.zip"
+						}
 						isPrimary={i == 0}
 						buttonText="Download"
 						commit={branch.commit}
