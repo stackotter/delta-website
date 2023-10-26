@@ -13,10 +13,10 @@
 			rel="stylesheet"
 		/>
 
-		%svelte.head%
+		%sveltekit.head%
 	</head>
 
-	<body>
-		<div id="svelte">%svelte.body%</div>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

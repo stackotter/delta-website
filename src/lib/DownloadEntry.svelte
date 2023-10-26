@@ -16,16 +16,16 @@
 	</div>
 
 	{#if isPrimary}
-	<div id="first-button-primary" class="download-button">
-		<PrimaryButton href="{downloadURL}">{buttonText}</PrimaryButton>
-	</div>
-	<div id="first-button-secondary" class="download-button secondary-button">
-		<SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
-	</div>
+		<div id="first-button-primary" class="download-button">
+			<PrimaryButton href="{downloadURL}">{buttonText}</PrimaryButton>
+		</div>
+		<div id="first-button-secondary" class="download-button secondary-button">
+			<SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
+		</div>
 	{:else}
-	<div class="download-button secondary-button">
-		<SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
-	</div>
+		<div class="download-button secondary-button">
+			<SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
+		</div>
 	{/if}
 </div>
 

@@ -18,8 +18,9 @@
 {#if $enlargedImage.presented}
 	<button in:fade={{ duration: 200 }} out:fade={{ duration: 300 }} id="overlay" on:click={() => $enlargedImage.presented = false}>
 		<div id="img-container" in:fly={{ y: 400, duration: 400 }}>
-			<img class="screenshot" src={$enlargedImage.src} alt={$enlargedImage.alt} on:keydown|stopPropagation on:click|stopPropagation>
-			<div id="cross"/>
+			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+			<img class="screenshot" src={$enlargedImage.src} alt={$enlargedImage.alt} on:click|stopPropagation />
+			<div id="cross" />
 		</div>
 	</button>
 {/if}

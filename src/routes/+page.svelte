@@ -30,9 +30,12 @@
 			<a href="/discord" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo" /></a>
 		</span>
 	</div>
-	<img on:keydown={enlargeImage} on:click={enlargeImage} src="screenshot-1.webp" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot" />
-	<button id="scroll-prompt" on:click={() => scrollTo({element: "#details", offset: -50})}>see more</button>
-	<button id="carat" on:click={() => scrollTo({element: "#details", offset: -50})} />
+	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+	<img on:click={enlargeImage} src="screenshot-1.webp" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot" />
+	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+	<div role="button" tabindex=0 id="scroll-prompt" on:click={() => scrollTo({ element: "#details", offset: -50 })}>see more</div>
+	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+	<div role="button" tabindex=0 id="carat" on:click={() => scrollTo({ element: "#details", offset: -50 })} />
 </div>
 
 <div id="details">
@@ -52,13 +55,15 @@
 			</p>
 		</div>
 		<div class="section-right">
-			<img on:keydown={enlargeImage} on:click={enlargeImage} src="screenshot-2.webp" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot">
+			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+			<img on:click={enlargeImage} src="screenshot-2.webp" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot" />
 		</div>
 	</div>
 
 	<div class="section image-first-section">
 		<div class="section-left">
-			<img on:keydown={enlargeImage} on:click={enlargeImage} src="screenshot-3.webp" alt="Server list of Delta Client" class="screenshot">
+			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+			<img on:click={enlargeImage} src="screenshot-3.webp" alt="Server list of Delta Client" class="screenshot" />
 		</div>
 		<div class="section-right">
 			<h1>A sleek and intuitive UI</h1>

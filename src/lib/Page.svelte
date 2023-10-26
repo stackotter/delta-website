@@ -5,9 +5,7 @@
 	export let description = "A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS.";
 </script>
 
-<SvelteSeo
-	{title}
-	{description} />
+<SvelteSeo {title} {description} />
 
 <div id="content">
 	<slot />

@@ -3,20 +3,15 @@
 
 	let mobileMenuActive = false;
 
-	const toggleMenu = () => {
-		mobileMenuActive = !mobileMenuActive
-	};
-
-	const closeMenu = () => {
-		mobileMenuActive = false
-	};
+	const toggleMenu = () => { mobileMenuActive = !mobileMenuActive };
+	const closeMenu = () => { mobileMenuActive = false };
 </script>
 
 <svelte:body style={mobileMenuActive ? "overflow: hidden;" : ""} />
 
 <div id="desktop-nav" class="nav">
 	<span class="nav-left">
-		<a href="/"><img id="logo" src="favicon@2x.png" alt="Delta Client logo"></a>
+		<a href="/"><img id="logo" src="favicon@2x.png" alt="Delta Client logo" /></a>
 		<a class="link" href="/">Delta Client</a>
 	</span>
 	<span class="nav-right">
@@ -29,12 +24,13 @@
 
 <div id="mobile-nav" class="nav">
 	<span class="nav-left">
-		<a on:click={closeMenu} href="/"><img id="logo" src="favicon@2x.png" alt="Delta Client logo"></a>
+		<a on:click={closeMenu} href="/"><img id="logo" src="favicon@2x.png" alt="Delta Client logo" /></a>
 		<a on:click={closeMenu} class="link" href="/">Delta Client</a>
 	</span>
-	<button id="menu-button" class="nav-right" on:click={toggleMenu}>
-		<div class="hamburger {mobileMenuActive ? "cross" : ""}"/>
-	</button>
+	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
+	<div role="button" tabindex=0 id="menu-button" class="nav-right" on:click={toggleMenu}>
+		<div class="hamburger {mobileMenuActive ? "cross" : ""}" />
+	</div>
 	{#if mobileMenuActive}
 		<div id="overlay" in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
 			<ul in:fly={{ y: 250, duration: 400 }} out:fly={{ y: 250, duration: 400 }}>
