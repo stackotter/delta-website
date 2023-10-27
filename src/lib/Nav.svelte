@@ -1,28 +1,32 @@
 <script>
 	import { fade, fly } from "svelte/transition";
-	import { onMount } from "svelte";
+	import { scrollTo } from "svelte-scrollto";
 
 	let mobileMenuActive = false;
 
-	let updateScroll = () => {};
-
-	// TODO: Find a way to do this without using DOM stuff (probably with a store?)
-	onMount(() => {
-		updateScroll = (active) => {
-			document.body.style.overflow = active ? "hidden" : "";
-		};
-	});
-
 	const toggleMenu = () => {
 		mobileMenuActive = !mobileMenuActive;
-		updateScroll(mobileMenuActive);
+		if (mobileMenuActive) {
+			// If we don't do this the top bar could be slightly scrolled and it
+			// looks really weird.
+			scrollTo({ element: "html" });
+		}
 	};
 
 	const closeMenu = () => {
 		mobileMenuActive = false;
-		updateScroll(mobileMenuActive);
 	};
 </script>
+
+<svelte:head>
+	{#if mobileMenuActive}
+		<style>
+			body {
+				overflow: hidden;
+			}
+		</style>
+	{/if}
+</svelte:head>
 
 <div id="desktop-nav" class="nav">
 	<span class="nav-left">
