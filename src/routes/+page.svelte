@@ -36,7 +36,6 @@
 			>
 		</span>
 	</div>
-	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 	<img
 		src="screenshot-1.webp"
 		alt="Screenshot of playing Minecraft with Delta Client"
@@ -82,7 +81,6 @@
 			</p>
 		</div>
 		<div class="section-right">
-			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 			<img
 				src="screenshot-2.webp"
 				alt="Screenshot of playing Minecraft with Delta Client"
@@ -93,7 +91,6 @@
 
 	<div class="section image-first-section">
 		<div class="section-left">
-			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 			<img src="screenshot-3.webp" alt="Server list of Delta Client" class="screenshot" />
 		</div>
 		<div class="section-right">
