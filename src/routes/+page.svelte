@@ -3,7 +3,6 @@
 	import Metric from "$lib/Metric.svelte";
 	import PrimaryButton from "$lib/PrimaryButton.svelte";
 	import Sponsors from "$lib/Sponsors.svelte";
-	import { enlargeImage } from "../stores.js";
 
 	import { scrollTo } from "svelte-scrollto";
 	import SvelteSeo from "svelte-seo";
@@ -39,7 +38,6 @@
 	</div>
 	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 	<img
-		on:click={enlargeImage}
 		src="screenshot-1.webp"
 		alt="Screenshot of playing Minecraft with Delta Client"
 		id="lead-screenshot"
@@ -86,7 +84,6 @@
 		<div class="section-right">
 			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 			<img
-				on:click={enlargeImage}
 				src="screenshot-2.webp"
 				alt="Screenshot of playing Minecraft with Delta Client"
 				class="screenshot"
@@ -97,12 +94,7 @@
 	<div class="section image-first-section">
 		<div class="section-left">
 			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-			<img
-				on:click={enlargeImage}
-				src="screenshot-3.webp"
-				alt="Server list of Delta Client"
-				class="screenshot"
-			/>
+			<img src="screenshot-3.webp" alt="Server list of Delta Client" class="screenshot" />
 		</div>
 		<div class="section-right">
 			<h1>A sleek and intuitive UI</h1>
