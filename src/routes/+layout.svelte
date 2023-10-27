@@ -3,7 +3,7 @@
 
 	import Nav from "$lib/Nav.svelte";
 	import { enlargedImage } from "../stores.js";
-	
+
 	import SvelteSeo from "svelte-seo";
 	import { fade, fly } from "svelte/transition";
 
@@ -11,15 +11,24 @@
 </script>
 
 <svelte:window bind:outerWidth={width} />
-<svelte:body style={($enlargedImage.presented && width > 900) ? "overflow: hidden;" : ""} />
 
 <SvelteSeo title="Delta Client" />
 
 {#if $enlargedImage.presented}
-	<button in:fade={{ duration: 200 }} out:fade={{ duration: 300 }} id="overlay" on:click={() => $enlargedImage.presented = false}>
+	<button
+		in:fade={{ duration: 200 }}
+		out:fade={{ duration: 300 }}
+		id="overlay"
+		on:click={() => ($enlargedImage.presented = false)}
+	>
 		<div id="img-container" in:fly={{ y: 400, duration: 400 }}>
 			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-			<img class="screenshot" src={$enlargedImage.src} alt={$enlargedImage.alt} on:click|stopPropagation />
+			<img
+				class="screenshot"
+				src={$enlargedImage.src}
+				alt={$enlargedImage.alt}
+				on:click|stopPropagation
+			/>
 			<div id="cross" />
 		</div>
 	</button>
@@ -41,7 +50,7 @@
 		background: #0008;
 	}
 
-	@media(max-width: 900px) {
+	@media (max-width: 900px) {
 		#overlay {
 			display: none;
 		}
@@ -63,12 +72,13 @@
 		right: -0.95rem;
 	}
 
-	#cross::before, #cross::after {
+	#cross::before,
+	#cross::after {
 		display: block;
 		width: 1.5rem;
 		height: 0.1rem;
 		background: #ddd;
-		content: '';
+		content: "";
 		position: absolute;
 	}
 

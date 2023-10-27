@@ -30,8 +30,10 @@
 	description="Delta Client is still deep in development so only automated development builds are provided."
 >
 	<h1>Downloads</h1>
-	<p>Delta Client is still deep in development so only automated development builds are provided.</p>
-	
+	<p>
+		Delta Client is still deep in development so only automated development builds are provided.
+	</p>
+
 	<h2>Builds</h2>
 	{#if branches == null}
 		<p>Loading repository information...</p>
@@ -41,11 +43,9 @@
 				<div class="download">
 					<DownloadEntry
 						title={branch.name}
-						downloadURL={
-							"https://backend.deltaclient.app/download/" +
+						downloadURL={"https://backend.deltaclient.app/download/" +
 							branch.name +
-							"/latest/DeltaClient.app.zip"
-						}
+							"/latest/DeltaClient.app.zip"}
 						isPrimary={i == 0}
 						buttonText="Download"
 						commit={branch.commit}

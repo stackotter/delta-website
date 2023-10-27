@@ -1,19 +1,42 @@
+<script lang="ts">
+	import { onMount } from "svelte";
+
+	// TODO: Strongly type elements of contributors
+	let contributors: any[] | null = null;
+	let loadFailed = false;
+
+	onMount(async () => {
+		try {
+			let response = await fetch(
+				"https://api.github.com/repos/stackotter/delta-client/contributors"
+			);
+			contributors = await response.json();
+		} catch {
+			loadFailed = true;
+		}
+	});
+</script>
+
 <div id="container">
-	{#await fetch("https://api.github.com/repos/stackotter/delta-client/contributors")}
-		<div>Loading contributors...</div>
-	{:then response}
-		{#await response.json() then contributors}
+	{#if !loadFailed}
+		{#if contributors === null}
+			<div>Loading contributors...</div>
+		{:else}
 			<div id="contributors">
 				{#each contributors as contributor}
 					<a href={contributor.html_url} class="contributor" title={contributor.login}>
-						<img class="avatar" src="{contributor.avatar_url}&size=128" alt="{contributor.login}'s GitHub avatar" />
+						<img
+							class="avatar"
+							src="{contributor.avatar_url}&size=128"
+							alt="{contributor.login}'s GitHub avatar"
+						/>
 					</a>
 				{/each}
 			</div>
-		{/await}
-	{:catch}
+		{/if}
+	{:else}
 		<div>Failed to load contributors from GitHub.</div>
-	{/await}
+	{/if}
 </div>
 
 <style>

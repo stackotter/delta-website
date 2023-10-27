@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	padding: 0;
 	margin: 0;
 	background: white;
@@ -10,7 +11,7 @@ html, body {
 }
 
 :root {
-	font-family: 'Work Sans', sans-serif;
+	font-family: "Work Sans", sans-serif;
 	font-weight: normal;
 	color: black;
 	background: white;
@@ -19,7 +20,7 @@ html, body {
 h1 {
 	font-size: 2rem;
 	font-weight: 550;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	margin-bottom: 1rem;
 	margin-left: -2px;
 }
@@ -27,21 +28,21 @@ h1 {
 h2 {
 	font-size: 1.4rem;
 	font-weight: 550;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	margin-bottom: 0rem;
 }
 
 p {
-	font-family: 'Work Sans', sans-serif;
+	font-family: "Work Sans", sans-serif;
 }
 
 a {
 	text-decoration: none;
-	color: #8900FF;
+	color: #8900ff;
 }
 
 /* Phone */
-@media(max-width: 500px) {
+@media (max-width: 500px) {
 	h1 {
 		font-size: 1.5rem;
 		margin-left: -1px;
@@ -53,7 +54,7 @@ a {
 }
 
 /* Small phones */
-@media(max-width: 400px) {
+@media (max-width: 400px) {
 	h1 {
 		font-size: 1.3rem;
 		font-weight: 550;

@@ -20,7 +20,11 @@
 		{#if sponsor.type == type}
 			<span class="sponsor">
 				<a href={sponsor.github}>
-					<img class="avatar" src="{sponsor.github}.png?size=128" alt="{sponsor.name}'s GitHub avatar" />
+					<img
+						class="avatar"
+						src="{sponsor.github}.png?size=128"
+						alt="{sponsor.name}'s GitHub avatar"
+					/>
 				</a>
 			</span>
 		{/if}

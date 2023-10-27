@@ -1,13 +1,28 @@
 <script>
 	import { fade, fly } from "svelte/transition";
+	import { onMount } from "svelte";
 
 	let mobileMenuActive = false;
 
-	const toggleMenu = () => { mobileMenuActive = !mobileMenuActive };
-	const closeMenu = () => { mobileMenuActive = false };
-</script>
+	let updateScroll = () => {};
 
-<svelte:body style={mobileMenuActive ? "overflow: hidden;" : ""} />
+	// TODO: Find a way to do this without using DOM stuff (probably with a store?)
+	onMount(() => {
+		updateScroll = (active) => {
+			document.body.style.overflow = active ? "hidden" : "";
+		};
+	});
+
+	const toggleMenu = () => {
+		mobileMenuActive = !mobileMenuActive;
+		updateScroll(mobileMenuActive);
+	};
+
+	const closeMenu = () => {
+		mobileMenuActive = false;
+		updateScroll(mobileMenuActive);
+	};
+</script>
 
 <div id="desktop-nav" class="nav">
 	<span class="nav-left">
@@ -24,12 +39,14 @@
 
 <div id="mobile-nav" class="nav">
 	<span class="nav-left">
-		<a on:click={closeMenu} href="/"><img id="logo" src="favicon@2x.png" alt="Delta Client logo" /></a>
+		<a on:click={closeMenu} href="/"
+			><img id="logo" src="favicon@2x.png" alt="Delta Client logo" /></a
+		>
 		<a on:click={closeMenu} class="link" href="/">Delta Client</a>
 	</span>
 	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-	<div role="button" tabindex=0 id="menu-button" class="nav-right" on:click={toggleMenu}>
-		<div class="hamburger {mobileMenuActive ? "cross" : ""}" />
+	<div role="button" tabindex="0" id="menu-button" class="nav-right" on:click={toggleMenu}>
+		<div class="hamburger {mobileMenuActive ? 'cross' : ''}" />
 	</div>
 	{#if mobileMenuActive}
 		<div id="overlay" in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
@@ -47,7 +64,7 @@
 <style>
 	.nav {
 		height: 4rem;
-		font-family: 'Montserrat', sans-serif;
+		font-family: "Montserrat", sans-serif;
 		font-weight: 550;
 		font-size: 1rem;
 		display: flex;
@@ -107,7 +124,7 @@
 		z-index: 100;
 	}
 
-	.link{
+	.link {
 		text-decoration: none;
 		color: black;
 		padding: 0 1rem;
@@ -118,15 +135,17 @@
 		width: 1.5rem;
 	}
 
-	.hamburger, .hamburger:after, .hamburger:before {
+	.hamburger,
+	.hamburger:after,
+	.hamburger:before {
 		transition: 300ms;
-		content: '';
+		content: "";
 		display: block;
 		height: 0.15rem;
 		width: 1.5rem;
 		background: #000;
 		border-radius: 0.075rem;
-		transform: translateY(0.2rem)
+		transform: translateY(0.2rem);
 	}
 
 	.hamburger:before {
@@ -155,7 +174,7 @@
 	}
 
 	/* Change to hamburger menu */
-	@media(max-width: 720px) {
+	@media (max-width: 720px) {
 		#desktop-nav {
 			display: none;
 		}
@@ -165,10 +184,9 @@
 		}
 	}
 
-	@media(max-width: 450px) {
+	@media (max-width: 450px) {
 		.nav {
 			margin-top: 0.5rem;
-
 		}
 
 		.nav-left {

@@ -2,7 +2,8 @@
 	import SvelteSeo from "svelte-seo";
 
 	export let title = "Delta Client";
-	export let description = "A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS.";
+	export let description =
+		"A next generation Minecraft client. Completely open source, written in Swift, and optimised for macOS.";
 </script>
 
 <SvelteSeo {title} {description} />
@@ -19,25 +20,25 @@
 		margin-bottom: 5rem;
 	}
 
-	@media(max-width: 1410px) {
+	@media (max-width: 1410px) {
 		#content {
 			width: 570px;
 		}
 	}
 
-	@media(max-width: 860px) {
+	@media (max-width: 860px) {
 		#content {
 			margin-top: 3rem;
 		}
 	}
 
-	@media(max-width: 650px) {
+	@media (max-width: 650px) {
 		#content {
 			width: calc(100% - 5.2rem);
 		}
 	}
 
-	@media(max-width: 400px) {
+	@media (max-width: 400px) {
 		#content {
 			width: calc(100% - 3.3rem);
 			margin-top: 2rem;

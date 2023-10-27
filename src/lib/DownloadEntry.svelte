@@ -12,19 +12,24 @@
 <div class="download-entry">
 	<div class="version-description">
 		<div class="version-title">{title}</div>
-		<div class="version-metadata">commit: <a class="commit-link" href={"https://github.com/stackotter/delta-client/commit/" + commit}>{commit}</a></div>
+		<div class="version-metadata">
+			commit: <a
+				class="commit-link"
+				href={"https://github.com/stackotter/delta-client/commit/" + commit}>{commit}</a
+			>
+		</div>
 	</div>
 
 	{#if isPrimary}
 		<div id="first-button-primary" class="download-button">
-			<PrimaryButton href="{downloadURL}">{buttonText}</PrimaryButton>
+			<PrimaryButton href={downloadURL}>{buttonText}</PrimaryButton>
 		</div>
 		<div id="first-button-secondary" class="download-button secondary-button">
-			<SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
+			<SecondaryButton href={downloadURL}>{buttonText}</SecondaryButton>
 		</div>
 	{:else}
 		<div class="download-button secondary-button">
-			<SecondaryButton href="{downloadURL}">{buttonText}</SecondaryButton>
+			<SecondaryButton href={downloadURL}>{buttonText}</SecondaryButton>
 		</div>
 	{/if}
 </div>
@@ -68,13 +73,13 @@
 		margin-top: 0.1rem;
 	}
 
-	@media(max-width: 560px) {
+	@media (max-width: 560px) {
 		.version-metadata {
 			display: none;
 		}
 	}
 
-	@media(max-width: 440px) {
+	@media (max-width: 440px) {
 		#first-button-primary {
 			display: none;
 		}

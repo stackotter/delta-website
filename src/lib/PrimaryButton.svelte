@@ -2,7 +2,7 @@
 	export let href;
 </script>
 
-<a href={href} id="primary-button">
+<a {href} id="primary-button">
 	<slot />
 </a>
 
@@ -12,11 +12,11 @@
 		display: flex;
 		align-items: center;
 		border: none;
-		font-family: 'Work Sans', sans-serif;
+		font-family: "Work Sans", sans-serif;
 		font-size: 1rem;
 		font-weight: 550;
 		color: white;
-		background: #8900FF;
+		background: #8900ff;
 		border-radius: 1.25rem;
 		padding: 0 2.5rem;
 		height: 2.5rem;

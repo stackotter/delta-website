@@ -23,29 +23,58 @@
 <div id="landing-page">
 	<div id="lead">
 		<h1 id="heading">A next generation Minecraft client</h1>
-		<div id="subtitle">Completely <span class="emphasis">open source</span>, written in Swift, and <span class="emphasis">optimised</span> for macOS.</div>
+		<div id="subtitle">
+			Completely <span class="emphasis">open source</span>, written in Swift, and
+			<span class="emphasis">optimised</span> for macOS.
+		</div>
 		<span id="buttons">
 			<PrimaryButton href="/downloads">Download</PrimaryButton>
-			<a href="https://github.com/stackotter/delta-client" id="github-button" class="icon-button"><img src="github.png" alt="GitHub logo" /></a>
-			<a href="/discord" id="discord-button" class="icon-button"><img src="discord.png" alt="Discord logo" /></a>
+			<a href="https://github.com/stackotter/delta-client" id="github-button" class="icon-button"
+				><img src="github.png" alt="GitHub logo" /></a
+			>
+			<a href="/discord" id="discord-button" class="icon-button"
+				><img src="discord.png" alt="Discord logo" /></a
+			>
 		</span>
 	</div>
 	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-	<img on:click={enlargeImage} src="screenshot-1.webp" alt="Screenshot of playing Minecraft with Delta Client" id="lead-screenshot" class="screenshot" />
+	<img
+		on:click={enlargeImage}
+		src="screenshot-1.webp"
+		alt="Screenshot of playing Minecraft with Delta Client"
+		id="lead-screenshot"
+		class="screenshot"
+	/>
 	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-	<div role="button" tabindex=0 id="scroll-prompt" on:click={() => scrollTo({ element: "#details", offset: -50 })}>see more</div>
+	<div
+		role="button"
+		tabindex="0"
+		id="scroll-prompt"
+		on:click={() => scrollTo({ element: "#details", offset: -50 })}
+	>
+		see more
+	</div>
 	<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-	<div role="button" tabindex=0 id="carat" on:click={() => scrollTo({ element: "#details", offset: -50 })} />
+	<div
+		role="button"
+		tabindex="0"
+		id="carat"
+		on:click={() => scrollTo({ element: "#details", offset: -50 })}
+	/>
 </div>
 
 <div id="details">
 	<div class="section">
 		<div class="section-left">
 			<h1>Changing the meaning of speed</h1>
-			<p>Delta Client has 3x higher fps, 2.5x lower cpu usage, starts faster than the Minecraft launcher and loads chunk as smooth as butter. Lag will no longer be an excuse for a lack of skills.</p>
+			<p>
+				Delta Client has 3x higher fps, 2.5x lower cpu usage, starts faster than the Minecraft
+				launcher and loads chunk as smooth as butter. Lag will no longer be an excuse for a lack of
+				skills.
+			</p>
 			<div id="metrics">
 				{#each metrics as metric}
-					<div class="metric"><Metric name="{metric.name}" value={metric.value}/></div>
+					<div class="metric"><Metric name={metric.name} value={metric.value} /></div>
 				{/each}
 			</div>
 			<p id="note">
@@ -56,37 +85,72 @@
 		</div>
 		<div class="section-right">
 			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-			<img on:click={enlargeImage} src="screenshot-2.webp" alt="Screenshot of playing Minecraft with Delta Client" class="screenshot" />
+			<img
+				on:click={enlargeImage}
+				src="screenshot-2.webp"
+				alt="Screenshot of playing Minecraft with Delta Client"
+				class="screenshot"
+			/>
 		</div>
 	</div>
 
 	<div class="section image-first-section">
 		<div class="section-left">
 			<!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-			<img on:click={enlargeImage} src="screenshot-3.webp" alt="Server list of Delta Client" class="screenshot" />
+			<img
+				on:click={enlargeImage}
+				src="screenshot-3.webp"
+				alt="Server list of Delta Client"
+				class="screenshot"
+			/>
 		</div>
 		<div class="section-right">
 			<h1>A sleek and intuitive UI</h1>
-			<p>Delta Client's UI was designed to feel right at home on macOS. It's powered by SwiftUI which allows the client to have extremely low resource usage when not in-game.</p>
+			<p>
+				Delta Client's UI was designed to feel right at home on macOS. It's powered by SwiftUI which
+				allows the client to have extremely low resource usage when not in-game.
+			</p>
 			<div class="spacer" />
 			<h1>Quick to install</h1>
-			<p>Just download the app, open it, wait a minute or two, login, and you're ready to go! Yep, it's really that simple.</p>
+			<p>
+				Just download the app, open it, wait a minute or two, login, and you're ready to go! Yep,
+				it's really that simple.
+			</p>
 		</div>
 	</div>
 
 	<div class="section" id="contribution-section">
 		<div class="section-right">
 			<h1>Contributing</h1>
-			<div class="paragraph">There are many ways to contribute to Delta Client. Any help with developing the client, the website or Swift Bundler is always greatly appreciated.</div>
-			<div class="paragraph last-paragraph">To get started, read <a href="https://github.com/stackotter/delta-client/blob/main/Contributing.md">the Delta Client contributing guidelines</a>.</div>
+			<div class="paragraph">
+				There are many ways to contribute to Delta Client. Any help with developing the client, the
+				website or Swift Bundler is always greatly appreciated.
+			</div>
+			<div class="paragraph last-paragraph">
+				To get started, read <a
+					href="https://github.com/stackotter/delta-client/blob/main/Contributing.md"
+					>the Delta Client contributing guidelines</a
+				>.
+			</div>
 			<h1>Contributors</h1>
 			<div>The following developers have helped with the development of Delta Client.</div>
 			<Contributors />
 		</div>
 		<div class="section-left">
 			<h1>Sponsoring Delta Client</h1>
-			<div>Delta Client's development is funded purely through sponsorship. All sponsorships go to stackotter (the main developer) and help him spend more time on the development of Delta Client. Every single sponsorship and one-time donation is greatly appreciated.</div>
-			<iframe class="sponsor-button" src="https://github.com/sponsors/stackotter/button" title="Sponsor stackotter" height="35" width="116" style="border: 0;"></iframe>
+			<div>
+				Delta Client's development is funded purely through sponsorship. All sponsorships go to
+				stackotter (the main developer) and help him spend more time on the development of Delta
+				Client. Every single sponsorship and one-time donation is greatly appreciated.
+			</div>
+			<iframe
+				class="sponsor-button"
+				src="https://github.com/sponsors/stackotter/button"
+				title="Sponsor stackotter"
+				height="35"
+				width="116"
+				style="border: 0;"
+			/>
 			<h1>Primary Sponsors</h1>
 			<div>The financial support of these people helps me to continue working on the project.</div>
 			<Sponsors type="Primary" />
@@ -96,7 +160,11 @@
 	<div class="section" id="last-section">
 		<div class="section-left">
 			<h1>Thanks for dropping by!</h1>
-			<p>Thank you for checking out Delta Client. The dream is still far away, but we are constantly getting closer to making the fastest Minecraft client, and if that catches your imagination, feel free to drop by in our <a href="/discord">Discord</a> and say hi :)</p>
+			<p>
+				Thank you for checking out Delta Client. The dream is still far away, but we are constantly
+				getting closer to making the fastest Minecraft client, and if that catches your imagination,
+				feel free to drop by in our <a href="/discord">Discord</a> and say hi :)
+			</p>
 		</div>
 	</div>
 </div>
@@ -153,7 +221,8 @@
 		filter: drop-shadow(0 0.8rem 2rem #0006);
 	}
 
-	.section-left, .section-right {
+	.section-left,
+	.section-right {
 		width: 40%;
 		display: flex;
 		flex-direction: column;
@@ -201,7 +270,7 @@
 	}
 
 	#carat {
-		content: '';
+		content: "";
 		position: absolute;
 		bottom: 1.1rem;
 		transform: translate(-0.8rem, 0);
@@ -213,7 +282,7 @@
 		height: 0.15rem;
 		border-radius: 0.075rem;
 		background: #848484;
-		content: '';
+		content: "";
 		position: absolute;
 		transform: rotate(35deg);
 		bottom: 0;
@@ -225,13 +294,14 @@
 		height: 0.15rem;
 		border-radius: 0.075rem;
 		background: #848484;
-		content: '';
+		content: "";
 		position: absolute;
 		transform: translate(0.65rem, 0) rotate(-35deg);
 		bottom: 0;
 	}
 
-	#lead, #lead-screenshot {
+	#lead,
+	#lead-screenshot {
 		margin-top: -4rem;
 	}
 
@@ -240,7 +310,7 @@
 	}
 
 	#heading {
-		font-family: 'Montserrat', sans-serif;
+		font-family: "Montserrat", sans-serif;
 		font-weight: 600;
 		font-size: 2.5rem;
 		margin: 0;
@@ -286,7 +356,7 @@
 	/* Media queries (woohoo) */
 
 	/* Laptop screens (original css was made for external monitor) */
-	@media(max-width: 1412px) {
+	@media (max-width: 1412px) {
 		#details {
 			width: 95vw;
 		}
@@ -301,7 +371,7 @@
 	}
 
 	/* Layout becomes linear (still a landing page though) */
-	@media(max-width: 1140px) {
+	@media (max-width: 1140px) {
 		#landing-page {
 			flex-direction: column-reverse;
 		}
@@ -317,7 +387,8 @@
 			margin-bottom: 4rem;
 		}
 
-		.section-left, .section-right {
+		.section-left,
+		.section-right {
 			width: 60%;
 			margin-bottom: 3rem;
 		}
@@ -349,25 +420,26 @@
 	}
 
 	/* Minor tweaks */
-	@media(max-width: 960px) {
+	@media (max-width: 960px) {
 		.section {
 			margin-bottom: 3rem;
 		}
 	}
 
 	/* Minor tweaks */
-	@media(max-width: 860px) {
+	@media (max-width: 860px) {
 		.section {
 			margin-bottom: 2.5rem;
 		}
 
-		.section-left, .section-right {
+		.section-left,
+		.section-right {
 			width: 70%;
 			margin-bottom: 2rem;
 		}
 	}
 
-	@media(max-width: 685px) {
+	@media (max-width: 685px) {
 		#landing-page {
 			flex-direction: column;
 		}
@@ -380,7 +452,8 @@
 			display: none;
 		}
 
-		.section-left, .section-right {
+		.section-left,
+		.section-right {
 			width: 80%;
 		}
 
@@ -393,39 +466,43 @@
 		}
 	}
 
-	@media(min-width: 1140px) and (max-height: 540px) {
+	@media (min-width: 1140px) and (max-height: 540px) {
 		#landing-page {
 			height: initial;
 			margin-top: 6.5rem;
 		}
 
-		#lead, #lead-screenshot {
+		#lead,
+		#lead-screenshot {
 			margin-top: 0rem;
 		}
 
-		#scroll-prompt, #carat {
+		#scroll-prompt,
+		#carat {
 			display: none;
 		}
 	}
 
 	/* Get rid of landing page when too short */
-	@media(min-width: 500px) and (max-width: 1140px) and (max-height: 800px) {
+	@media (min-width: 500px) and (max-width: 1140px) and (max-height: 800px) {
 		#landing-page {
 			height: initial;
 			flex-direction: column;
 		}
 
-		#lead, #lead-screenshot {
+		#lead,
+		#lead-screenshot {
 			margin-top: 4rem;
 		}
 
-		#scroll-prompt, #carat {
+		#scroll-prompt,
+		#carat {
 			display: none;
 		}
 	}
 
 	/* Phone */
-	@media(max-width: 500px) {
+	@media (max-width: 500px) {
 		#lead {
 			width: calc(100% - 5rem);
 			text-align: left;
@@ -457,7 +534,8 @@
 			margin-bottom: 1.3rem;
 		}
 
-		#scroll-prompt, #carat {
+		#scroll-prompt,
+		#carat {
 			display: none;
 		}
 
@@ -466,7 +544,8 @@
 			width: 100vw;
 		}
 
-		.section-left, .section-right {
+		.section-left,
+		.section-right {
 			width: calc(100% - 5rem);
 		}
 
@@ -477,7 +556,7 @@
 	}
 
 	/* Even smaller phones */
-	@media(max-width: 400px) {
+	@media (max-width: 400px) {
 		#heading {
 			font-size: 1.6rem;
 		}
@@ -491,11 +570,15 @@
 			margin-top: 2rem;
 		}
 
-		#lead, #lead-screenshot, .section-left, .section-right {
+		#lead,
+		#lead-screenshot,
+		.section-left,
+		.section-right {
 			width: calc(100% - 3rem);
 		}
 
-		.section-left, .section-right {
+		.section-left,
+		.section-right {
 			margin-bottom: 1.5rem;
 		}
 
@@ -529,7 +612,7 @@
 		}
 	}
 
-	@media(max-width: 340px) {
+	@media (max-width: 340px) {
 		#buttons {
 			display: none;
 		}
